@@ -474,7 +474,7 @@ if (ingresar) {
     alert("Se te acabaron los intentos");
 }
 
-// Opciones de bebida (este segmento no parece relacionado con el cajero)
+// Opciones de bebida 
 let ingresoBebida = prompt(
     "Selecciona una bebida \n 1 - Café \n 2 - Té \n 3 - Agua caliente"
 );
@@ -493,3 +493,4 @@ switch (ingresoBebida) {
         alert("No seleccionaste una bebida");
         break;
 }
+
