@@ -788,204 +788,347 @@ d- salir
 
 // crear html (servicios)
 
-//localStorage.setItem("saludo", "Hola FLanders")
-localStorage.setItem("isValid", true)
-localStorage.setItem("edad", 20)
+// //localStorage.setItem("saludo", "Hola FLanders")
+// localStorage.setItem("isValid", true)
+// localStorage.setItem("edad", 20)
 
-const numeros= [1,23,4,5,6,7,78]
-localStorage.setItem("numeros", numeros)
+// const numeros= [1,23,4,5,6,7,78]
+// localStorage.setItem("numeros", numeros)
 
-//ver los valores almacenados
-const saludo= localStorage.getItem("saludo")
-console.log(typeof saludo);
-const isValid= localStorage.getItem("isValid") === "true" //
-//trampa LOCALSTORAGE guarda string
-let mayorQue= 5 > 10
-console.log(isValid);
+// //ver los valores almacenados
+// const saludo= localStorage.getItem("saludo")
+// console.log(typeof saludo);
+// const isValid= localStorage.getItem("isValid") === "true" //
+// //trampa LOCALSTORAGE guarda string
+// let mayorQue= 5 > 10
+// console.log(isValid);
 
-localStorage.setItem("usuario",{nombre:"pedro" , edad: 36, pass:"1234" });
+// localStorage.setItem("usuario",{nombre:"pedro" , edad: 36, pass:"1234" });
 
 
-// //localStorage.setItem("darkMode", "activo")
+// // //localStorage.setItem("darkMode", "activo")
+// // const toggleButton = document.getElementById("darkModeToggle");
+
+// // if (localStorage.getItem("darkMode") === "activo") {
+// //     document.body.classList.add("dark-mode");
+// // }
+// // //trabajar con el boton
+// // toggleButton.addEventListener("click", () => { if (document.body.classList.contains)("dark-mode")){
+// //         document.body.classList.remove("dark-mode");
+// //         localStorage.setItem("darkMode", "inactivo");
+// //     } else {
+// //         document.body.classList.add("dark-mode");
+// //         localStorage.setItem("darkMode", "activo");
+// //     }
+// // });
+
+// localStorage.setItem("darkMode", "activo")
 // const toggleButton = document.getElementById("darkModeToggle");
-
 // if (localStorage.getItem("darkMode") === "activo") {
-//     document.body.classList.add("dark-mode");
+// document.body.classList.add("dark-mode");
 // }
 // //trabajar con el boton
-// toggleButton.addEventListener("click", () => { if (document.body.classList.contains)("dark-mode")){
-//         document.body.classList.remove("dark-mode");
-//         localStorage.setItem("darkMode", "inactivo");
-//     } else {
-//         document.body.classList.add("dark-mode");
-//         localStorage.setItem("darkMode", "activo");
-//     }
+// toggleButton.addEventListener("click", () => {
+// if (document.body.classList.contains("dark-mode")) {
+// document.body.classList.remove("dark-mode");
+// localStorage.setItem("darkMode", "inactivo");
+// } else {
+// document.body.classList.add("dark-mode");
+// localStorage.setItem("darkMode", "activo");
+// }
 // });
 
-localStorage.setItem("darkMode", "activo")
-const toggleButton = document.getElementById("darkModeToggle");
-if (localStorage.getItem("darkMode") === "activo") {
-document.body.classList.add("dark-mode");
-}
-//trabajar con el boton
-toggleButton.addEventListener("click", () => {
-if (document.body.classList.contains("dark-mode")) {
-document.body.classList.remove("dark-mode");
-localStorage.setItem("darkMode", "inactivo");
-} else {
-document.body.classList.add("dark-mode");
-localStorage.setItem("darkMode", "activo");
-}
-});
+// //limpiar el LS
 
-//limpiar el LS
+// localStorage.removeItem("darkmode");
+// localStorage.removeItem("saludo");
+// //localStorage.clear() // elimina todas claves
+// // sessionStorage
+// // sessionStorage.setItem("sesion", "activa"); 
+// const userObject = { nombre : "Pedro", edad: 36, pass:"1234" };
 
-localStorage.removeItem("darkmode");
-localStorage.removeItem("saludo");
-//localStorage.clear() // elimina todas claves
-// sessionStorage
-// sessionStorage.setItem("sesion", "activa"); 
-const userObject = { nombre : "Pedro", edad: 36, pass:"1234" };
+//  alert("Bienvenido al banco");
 
- alert("Bienvenido al banco");
+//  // Definición del usuario y las operaciones del cajero
+//  let usuario = {
+//      pinGuardado: "5701",
+//      intentosRestantes: 3,
+//      saldo: 20000,
+//      transacciones: [],
 
- // Definición del usuario y las operaciones del cajero
- let usuario = {
-     pinGuardado: "5701",
-     intentosRestantes: 3,
-     saldo: 20000,
-     transacciones: [],
+//      verificarPin: function () {
+//          while (this.intentosRestantes > 0) {
+//              let ingreso = prompt("Ingresa tu PIN");
+//             if (this.pinGuardado === ingreso) {
+//                  alert("Bienvenido, ya puedes operar");
+//                  return true;
+//              } else {
+//                 this.intentosRestantes--;
+//                  alert("Error, ingresa nuevamente. Te quedan " + this.intentosRestantes + " intentos.");
+//             }
+//          }
+//          alert("Se te acabaron los intentos");
+//          return false;
+//      },
 
-     verificarPin: function () {
-         while (this.intentosRestantes > 0) {
-             let ingreso = prompt("Ingresa tu PIN");
-            if (this.pinGuardado === ingreso) {
-                 alert("Bienvenido, ya puedes operar");
-                 return true;
-             } else {
-                this.intentosRestantes--;
-                 alert("Error, ingresa nuevamente. Te quedan " + this.intentosRestantes + " intentos.");
-            }
-         }
-         alert("Se te acabaron los intentos");
-         return false;
-     },
+//     mostrarSaldo: function () {
+//          alert("Tu saldo es: " + this.saldo);
+//         this.transacciones.push("Consulta de saldo: " + this.saldo);
+//      },
 
-    mostrarSaldo: function () {
-         alert("Tu saldo es: " + this.saldo);
-        this.transacciones.push("Consulta de saldo: " + this.saldo);
-     },
+//      retirarDinero: function () {
+//          let retiro = parseFloat(prompt("Ingresa el monto a retirar"));
+//          if (retiro > this.saldo) {
+//              alert("Saldo insuficiente");
+//          } else {
+//              this.saldo -= retiro;
+//              alert("Retiro exitoso. Tu saldo es " + this.saldo);
+//              this.transacciones.push("Retiro: " + retiro);
+//          }
+//      },
 
-     retirarDinero: function () {
-         let retiro = parseFloat(prompt("Ingresa el monto a retirar"));
-         if (retiro > this.saldo) {
-             alert("Saldo insuficiente");
-         } else {
-             this.saldo -= retiro;
-             alert("Retiro exitoso. Tu saldo es " + this.saldo);
-             this.transacciones.push("Retiro: " + retiro);
-         }
-     },
+//      depositarDinero: function () {
+//          let deposito = parseFloat(prompt("Ingresa el monto a depositar"));
+//          if (deposito > 0) {
+//             this.saldo += deposito;
+//             alert("Depósito exitoso. Tu saldo es " + this.saldo);
+//             this.transacciones.push("Depósito: " + deposito);
+//         } else {
+//              alert("Monto no válido para depósito");
+//         }
+//     },
 
-     depositarDinero: function () {
-         let deposito = parseFloat(prompt("Ingresa el monto a depositar"));
-         if (deposito > 0) {
-            this.saldo += deposito;
-            alert("Depósito exitoso. Tu saldo es " + this.saldo);
-            this.transacciones.push("Depósito: " + deposito);
+//      mostrarTransacciones: function () {
+//          if (this.transacciones.length === 0) {
+//              alert("No hay transacciones recientes.");
+//          } else {
+//              alert("Transacciones recientes:\n" + this.transacciones.join("\n"));
+//          }
+//      }
+//  };
+
+//  // Verificación del PIN
+//  let ingresar = usuario.verificarPin();
+
+//  // Si el usuario ingresó correctamente el PIN, muestra las opciones
+//  if (ingresar) {
+//      let opcion;
+
+//      do {
+//          opcion = prompt(
+//              "Elegí una opción: \n1 - Saldo. \n2 - Retiro de dinero. \n3 - Depósito. \n4 - Ver transacciones. \nPresioná X para finalizar."
+//          );
+
+//          switch (opcion) {
+//              case "1":
+//                  usuario.mostrarSaldo();
+//                  break;
+//              case "2":
+//                  usuario.retirarDinero();
+//                  break;
+//              case "3":
+//                  usuario.depositarDinero();
+//                  break;
+//              case "4":
+//                  usuario.mostrarTransacciones();
+//                  break;
+//              case "X":
+//              case "x":
+//                  alert("Finalizando operación. Gracias por usar el cajero.");
+//                  break;
+//              default:
+//                  alert("Opción no válida");
+//                  break;
+//         }
+//     } while (opcion !== "X" && opcion !== "x");
+//  }
+
+// // // Opciones de bebida usando un array y permitiendo agregar nuevas
+// let bebidas = ["Café", "Té", "Agua caliente"];
+
+//  function seleccionarBebida() {
+//      let ingresoBebida = prompt(
+//          "Selecciona una bebida \n1 - Café \n2 - Té \n3 - Agua caliente \n4 - Agregar nueva bebida"
+//      );
+
+//      switch (ingresoBebida) {
+//          case "1":
+//          case "2":
+//          case "3":
+//              let indice = parseInt(ingresoBebida) - 1;
+//              alert("Seleccionaste " + bebidas[indice]);
+//              break;
+//          case "4":
+//              let nuevaBebida = prompt("Ingresa el nombre de la nueva bebida:");
+//             if (nuevaBebida) {
+//                  bebidas.push(nuevaBebida);
+//                  alert("Has agregado " + nuevaBebida + " a las opciones.");
+//             } else {
+//                 alert("Nombre de bebida no válido");
+//              }
+//              break;
+//          default:
+//              alert("Opción no válida");
+//              break;
+//      }
+//  }
+
+//  // Ejecutar la selección de bebidas
+//  seleccionarBebida();
+
+//  // Mostrar las opciones de bebidas actualizadas
+//  alert("Opciones de bebidas disponibles: \n" + bebidas.join("\n"));
+
+//  // Ejemplo de uso de un método en el objeto
+// function sumarRango(inicio, fin) {
+//      let total = 0;
+//      for (let i = inicio; i <= fin; i++) {
+//          total += i;
+//      }
+//      return total;
+//  }
+
+//  console.log("Suma de 1 a 10:", sumarRango(1, 10));
+
+alert("Bienvenido al banco");
+
+// Definición del usuario y las operaciones del cajero
+let usuario = {
+    pinGuardado: "5701",
+    intentosRestantes: 3,
+    saldo: 20000,
+    transacciones: [],
+
+    verificarPin: function () {
+        while (this.intentosRestantes > 0) {
+            let ingreso = prompt("Ingresa tu PIN");
+           if (this.pinGuardado === ingreso) {
+                alert("Bienvenido, ya puedes operar");
+                return true;
+            } else {
+               this.intentosRestantes--;
+                alert("Error, ingresa nuevamente. Te quedan " + this.intentosRestantes + " intentos.");
+           }
+        }
+        alert("Se te acabaron los intentos");
+        return false;
+    },
+
+   mostrarSaldo: function () {
+        alert("Tu saldo es: " + this.saldo);
+       this.transacciones.push("Consulta de saldo: " + this.saldo);
+    },
+
+    retirarDinero: function () {
+        let retiro = parseFloat(prompt("Ingresa el monto a retirar"));
+        if (retiro > this.saldo) {
+            alert("Saldo insuficiente");
         } else {
-             alert("Monto no válido para depósito");
+            this.saldo -= retiro;
+            alert("Retiro exitoso. Tu saldo es " + this.saldo);
+            this.transacciones.push("Retiro: " + retiro);
         }
     },
 
-     mostrarTransacciones: function () {
-         if (this.transacciones.length === 0) {
-             alert("No hay transacciones recientes.");
-         } else {
-             alert("Transacciones recientes:\n" + this.transacciones.join("\n"));
-         }
-     }
- };
+    depositarDinero: function () {
+        let deposito = parseFloat(prompt("Ingresa el monto a depositar"));
+        if (deposito > 0) {
+           this.saldo += deposito;
+           alert("Depósito exitoso. Tu saldo es " + this.saldo);
+           this.transacciones.push("Depósito: " + deposito);
+       } else {
+            alert("Monto no válido para depósito");
+       }
+   },
 
- // Verificación del PIN
- let ingresar = usuario.verificarPin();
-
- // Si el usuario ingresó correctamente el PIN, muestra las opciones
- if (ingresar) {
-     let opcion;
-
-     do {
-         opcion = prompt(
-             "Elegí una opción: \n1 - Saldo. \n2 - Retiro de dinero. \n3 - Depósito. \n4 - Ver transacciones. \nPresioná X para finalizar."
-         );
-
-         switch (opcion) {
-             case "1":
-                 usuario.mostrarSaldo();
-                 break;
-             case "2":
-                 usuario.retirarDinero();
-                 break;
-             case "3":
-                 usuario.depositarDinero();
-                 break;
-             case "4":
-                 usuario.mostrarTransacciones();
-                 break;
-             case "X":
-             case "x":
-                 alert("Finalizando operación. Gracias por usar el cajero.");
-                 break;
-             default:
-                 alert("Opción no válida");
-                 break;
+    mostrarTransacciones: function () {
+        if (this.transacciones.length === 0) {
+            alert("No hay transacciones recientes.");
+        } else {
+            alert("Transacciones recientes:\n" + this.transacciones.join("\n"));
         }
-    } while (opcion !== "X" && opcion !== "x");
- }
+    }
+};
+
+// Verificación del PIN
+let ingresar = usuario.verificarPin();
+
+// Si el usuario ingresó correctamente el PIN, muestra las opciones
+if (ingresar) {
+    let opcion;
+
+    do {
+        opcion = prompt(
+            "Elegí una opción: \n1 - Saldo. \n2 - Retiro de dinero. \n3 - Depósito. \n4 - Ver transacciones. \nPresioná X para finalizar."
+        );
+
+        switch (opcion) {
+            case "1":
+                usuario.mostrarSaldo();
+                break;
+            case "2":
+                usuario.retirarDinero();
+                break;
+            case "3":
+                usuario.depositarDinero();
+                break;
+            case "4":
+                usuario.mostrarTransacciones();
+                break;
+            case "X":
+            case "x":
+                alert("Finalizando operación. Gracias por usar el cajero.");
+                break;
+            default:
+                alert("Opción no válida");
+                break;
+       }
+   } while (opcion !== "X" && opcion !== "x");
+}
 
 // // Opciones de bebida usando un array y permitiendo agregar nuevas
 let bebidas = ["Café", "Té", "Agua caliente"];
 
- function seleccionarBebida() {
-     let ingresoBebida = prompt(
-         "Selecciona una bebida \n1 - Café \n2 - Té \n3 - Agua caliente \n4 - Agregar nueva bebida"
-     );
+function seleccionarBebida() {
+    let ingresoBebida = prompt(
+        "Selecciona una bebida \n1 - Café \n2 - Té \n3 - Agua caliente \n4 - Agregar nueva bebida"
+    );
 
-     switch (ingresoBebida) {
-         case "1":
-         case "2":
-         case "3":
-             let indice = parseInt(ingresoBebida) - 1;
-             alert("Seleccionaste " + bebidas[indice]);
-             break;
-         case "4":
-             let nuevaBebida = prompt("Ingresa el nombre de la nueva bebida:");
-            if (nuevaBebida) {
-                 bebidas.push(nuevaBebida);
-                 alert("Has agregado " + nuevaBebida + " a las opciones.");
-            } else {
-                alert("Nombre de bebida no válido");
-             }
-             break;
-         default:
-             alert("Opción no válida");
-             break;
-     }
- }
+    switch (ingresoBebida) {
+        case "1":
+        case "2":
+        case "3":
+            let indice = parseInt(ingresoBebida) - 1;
+            alert("Seleccionaste " + bebidas[indice]);
+            break;
+        case "4":
+            let nuevaBebida = prompt("Ingresa el nombre de la nueva bebida:");
+           if (nuevaBebida) {
+                bebidas.push(nuevaBebida);
+                alert("Has agregado " + nuevaBebida + " a las opciones.");
+           } else {
+               alert("Nombre de bebida no válido");
+            }
+            break;
+        default:
+            alert("Opción no válida");
+            break;
+    }
+}
 
- // Ejecutar la selección de bebidas
- seleccionarBebida();
+// Ejecutar la selección de bebidas
+seleccionarBebida();
 
- // Mostrar las opciones de bebidas actualizadas
- alert("Opciones de bebidas disponibles: \n" + bebidas.join("\n"));
+// Mostrar las opciones de bebidas actualizadas
+alert("Opciones de bebidas disponibles: \n" + bebidas.join("\n"));
 
- // Ejemplo de uso de un método en el objeto
+// Ejemplo de uso de un método en el objeto
 function sumarRango(inicio, fin) {
-     let total = 0;
-     for (let i = inicio; i <= fin; i++) {
-         total += i;
-     }
-     return total;
- }
+    let total = 0;
+    for (let i = inicio; i <= fin; i++) {
+        total += i;
+    }
+    return total;
+}
 
- console.log("Suma de 1 a 10:", sumarRango(1, 10));
+console.log("Suma de 1 a 10:", sumarRango(1, 10));
